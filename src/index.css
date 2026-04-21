@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Mono&display=swap');
+
+:root {
+  --bg-color: #fcfaf7;
+  --text-color: #2c2c2c;
+  --accent-color: #4a5d4a; /* Earthy green */
+  --border-color: #333;
+  --card-bg: #fff;
+  
+  --font-serif: 'Libre Baskerville', serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-style: italic;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent-color);
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.review-card {
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  box-shadow: 4px 4px 0px var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--border-color);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.category {
+  background: var(--accent-color);
+  color: white;
+  padding: 2px 8px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.rating {
+  color: #d4af37; /* Gold */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.content {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Category specific accents */
+.review-card.game { border-left: 8px solid #5d4a4a; }
+.review-card.show { border-left: 8px solid #4a4a5d; }
+.review-card.opinion { border-left: 8px solid #5d5d4a; }
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .review-card {
+    padding: 1.5rem;
+  }
+}
